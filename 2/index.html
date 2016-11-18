@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Заголовок</title>
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" /> -->
+
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.css" />
+
+	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
+	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
+	<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/media.css" />
+
+</head>
+<body>	
+	<div class="container">
+		<div class="row">
+			<div class="navbar navbar-static-top">	
+				<div class="navbar-header">
+					<i class="fa fa-home fa-5x" aria-hidden="true"></i>
+					<a class="navbar-brand navbar-brand-center" href="#">
+							<!-- <img class="logo-pic" src="images/logo_min.png" alt="RedEyesDevelopment" />  -->
+					</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+						<span class="sr-only">Открыть навигацию</span>
+						<span class="icon-bar"></span>	
+						<span class="icon-bar"></span>	
+						<span class="icon-bar"></span>	
+					</button>
+				</div>	
+				<div class="collapse navbar-collapse collapse-center" id="responsive-menu">
+					<ul class="nav navbar-nav">
+						<li><a href="#"><b>IRep</b><br/>Idea Repository</a></li>
+						<!-- <li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Пункт2 <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Пункт2-1</a></li>
+								<li><a href="#">Пункт2-2</a></li>
+								<li><a href="#">Пункт2-3</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Пункт2-4</a></li>	
+							</ul>						
+						</li>	
+						<li><a href="#">Пункт3</a></li>	
+						<li><a href="#">Пункт4</a></li>	 -->
+					</ul>			 
+					<form action="" class="navbar-form navbar-right hidden-sm">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="E-mail" value="">
+						</div>
+						<div class="form-group">						
+							<input type="password" class="form-control" placeholder="Password" value="">
+						</div>
+						<button type="submit" class="btn btn-primary">
+							<i class="fa fa-sign-in"></i> Войти					
+						</button>
+					</form>
+				</div>					
+			</div>		
+			<div class="col-md-9">			 				 
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a data-toggle="tab" href="#panel1">
+							Сортировка по:
+						</a>
+					</li>
+					<li>
+						<a data-toggle="tab" href="#panel2">
+							Фильтр по:	
+						</a>
+					</li>
+					<li>
+						<a data-toggle="tab" href="#panel3">
+							Создать идею:	
+						</a>
+					</li>
+				</ul>					 
+				<div class="tab-content">
+				  <div id="panel1" class="tab-pane fade in active">
+				   	<div class="btn-toolbar" role="toolbar" aria-label="...">
+  						<div class="btn-group" role="group" aria-label="...">
+  							<button type="button" class="btn btn-default">Дате создания</button>
+						    <button type="button" class="btn btn-default">Дате изменения</button>
+						    <button type="button" class="btn btn-default">Автор</button>
+						    <button type="button" class="btn btn-default">Название идеи</button>
+						    <button type="button" class="btn btn-default">Likes</button>
+						    <button type="button" class="btn btn-default">Dislikes</button>  
+  						</div>  
+					</div>
+				  </div>
+				  <div id="panel2" class="tab-pane fade">
+				    <div class="btn-toolbar" role="toolbar" aria-label="...">
+  						<div class="btn-group" role="group" aria-label="...">
+  							<button type="button" class="btn btn-default">Мои идеи</button>
+						    <button type="button" class="btn btn-default">С комментариями</button>
+						    <button type="button" class="btn btn-default">С картинками</button>
+						    <button type="button" class="btn btn-default">С видео</button>
+						    <button type="button" class="btn btn-default">With Likes</button>
+						    <button type="button" class="btn btn-default">With Dislikes</button>  
+  						</div>  
+					</div>
+				  </div>
+				    <div id="panel3" class="tab-pane fade">
+				    <form action="" class="form">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Name" value="">
+							<input type="text" class="form-control" placeholder="body idea" value="">
+						</div>
+						
+						<button type="submit" class="btn btn-primary">
+							<i class="fa fa-sign-in"></i> ок
+						</button>
+					</form>
+				    </div>				  
+				</div>					
+			</div>
+			<div class="col-md-3">
+				<div class="input-group">
+			      <input type="text" class="form-control" placeholder="Search for idea...">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button">Go!</button>
+			      </span>
+			    </div>
+			    <div class="input-group">
+			      <input type="text" class="form-control" placeholder="Search for tag...">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button">Go!</button>
+			      </span>
+			    </div>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="grid col-md-9">
+				<div class="thumbnail item">
+					<h1 class="item-name"><a href="">lorem ipsum lorem ipsum</a></h1>
+					<hr>
+					<p class="item-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<hr>
+					<div class="item-footer">
+						<span class="item-autor"><b>Петров Андрей</b> |</span>
+						<span class="item-like">Like:200 |</span>
+						<span class="item-dislike">Dislike:20 |</span>
+						<span class="item-view">Просмотров:205 |</span>
+						<span class="item-comment">Комментариев:25 </span>						
+						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+</span></a>/
+						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+</i></span></a>
+					</div>
+				</div>
+				<div class="thumbnail item">
+					<h1 class="item-name"><a href="">lorem ipsum lorem ipsum</a></h1>
+					<hr>
+					<p class="item-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<hr>
+					<div class="item-footer">
+						<span class="item-autor"><b>Петров Андрей</b> |</span>
+						<span class="item-like">Like:200 |</span>
+						<span class="item-dislike">Dislike:20 |</span>
+						<span class="item-view">Просмотров:205 |</span>
+						<span class="item-comment">Комментариев:25 </span>						
+						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+</span></a>/
+						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+</i></span></a>
+					</div>
+				</div>
+				<div class="thumbnail item">
+					<h1 class="item-name"><a href="">lorem ipsum lorem ipsum</a></h1>
+					<hr>
+					<p class="item-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<hr>
+					<div class="item-footer">
+						<span class="item-autor"><b>Петров Андрей</b> |</span>
+						<span class="item-like">Like:200 |</span>
+						<span class="item-dislike">Dislike:20 |</span>
+						<span class="item-view">Просмотров:205 |</span>
+						<span class="item-comment">Комментариев:25 </span>						
+						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+</span></a>/
+						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+</i></span></a>
+					</div>
+				</div>
+				<div class="thumbnail item">
+					<h1 class="item-name"><a href="">lorem ipsum lorem ipsum</a></h1>
+					<hr>
+					<p class="item-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<hr>
+					<div class="item-footer">
+						<span class="item-autor"><b>Петров Андрей</b> |</span>
+						<span class="item-like">Like:200 |</span>
+						<span class="item-dislike">Dislike:20 |</span>
+						<span class="item-view">Просмотров:205 |</span>
+						<span class="item-comment">Комментариев:25 </span>						
+						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+</span></a>/
+						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+</i></span></a>
+					</div>
+				</div>
+				<div class="thumbnail item">
+					<h1 class="item-name"><a href="">lorem ipsum lorem ipsum</a></h1>
+					<hr>
+					<p class="item-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<hr>
+					<div class="item-footer">
+						<span class="item-autor"><b>Петров Андрей</b> |</span>
+						<span class="item-like">Like:200 |</span>
+						<span class="item-dislike">Dislike:20 |</span>
+						<span class="item-view">Просмотров:205 |</span>
+						<span class="item-comment">Комментариев:25 </span>						
+						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+</span></a>
+						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+</i></span></a>
+					</div>
+				</div>
+				<div class="thumbnail item">
+					<h1 class="item-name"><a href="">lorem ipsum lorem ipsum</a></h1>
+					<hr>
+					<p class="item-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<hr>
+					<div class="item-footer">
+						<span class="item-autor"><b>Петров Андрей</b> |</span>
+						<span class="item-like">Like:200 |</span>
+						<span class="item-dislike">Dislike:20 |</span>
+						<span class="item-view">Просмотров:205 |</span>
+						<span class="item-comment">Комментариев:25 </span>						
+						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+</span></a>
+						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+</i></span></a>/
+					</div>
+				</div>
+			</div>
+			<div class="sidebar col-md-3">
+				<div class="tags_pic">
+					<img class="tags-pic-logo" src="images/1.png" alt="RedEyesDevelopment" />
+				</div>
+				<div class="tags">
+					<img class="tags-logo" src="images/2.png" alt="RedEyesDevelopment" />
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.js"></script>
+	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
+	<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
+	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+	<script src="libs/countdown/jquery.plugin.js"></script>
+	<script src="libs/countdown/jquery.countdown.min.js"></script>
+	<script src="libs/countdown/jquery.countdown-ru.js"></script>
+	<script src="libs/landing-nav/navigation.js"></script>
+	<script src="js/common.js"></script>
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>

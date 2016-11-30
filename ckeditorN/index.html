@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>	
+	<script> 
+		function f_submit(){
+			var value1 = CKEDITOR.instances['editor1'].getData();			
+			document.getElementById("editor").value=value1;			
+			return false;			
+		}
+	</script>
+
+</head>
+<body>		
+	<form method="POST" action="index.php" onsubmit="return f_submit();">
+	<textarea cols="80" name="editor1" id="editor1" cols="48" rows="10"></textarea>
+	<script>	
+	CKEDITOR.replace('editor1', {
+		filebrowserBrowseUrl: '/ckeditorN/kcfinder/browse.php',
+		filebrowserUploadUrl: '/ckeditorN/kcfinder/upload.php'
+		});
+	</script>
+	<br><input type="submit" value="Постить" name="B1"  >
+	</form>	
+
+	<textarea cols="80" name="editor" id="editor" cols="48" rows="10"></textarea>
+	
+</body>
+</html>

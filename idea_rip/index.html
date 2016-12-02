@@ -12,17 +12,43 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" href="favicon.png" />
-	<!-- <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" /> -->
+	<!-- <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />--> 
 
-	<link rel="stylesheet" href="libs/bootstrap/bootstrap.css" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.css" /> 
 
 	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+	
 	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
 	<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/media.css" />
+	<link rel="stylesheet" href="css/media.css" /> 
+
+	<script src="libs/jquery/jquery-3.1.1.min.js"></script> 
+	<script src="libs/bootstrap/bootstrap.js"></script>
+	<script src='libs/bootstrap-tags/dist/js/bootstrap-tags.js'></script>
+	<link rel="stylesheet" href="libs/bootstrap-tags/dist/css/bootstrap-tags.css" />
+	<link href="libs/tagmanager/bootstrap-tagmanager.css" rel="stylesheet">
+	<script src='libs/tagmanager/bootstrap-tagmanager.js'></script> 
+
+
+	<script type="text/javascript" src="libs/ckeditor/ckeditor.js"></script>
+	
+      
+    <style>
+            /* Mother effin brute force CSS reset... */
+            /* Always include after any other CSS */
+        * {
+            resize: none;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+        }
+    </style>
 
 </head>
 <body>	
@@ -116,14 +142,43 @@
 				    <div id="panel3" class="tab-pane fade">
 				    <form action="" class="form">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Name" value="">
-							<input type="text" class="form-control" placeholder="body idea" value="">
-						</div>
-						
+							<label class="text-primary">Нзвание идеи:</label>
+							<input type="text" class="form-control" placeholder="Name" value="">			
+							<label class="text-primary">Тэги идеи:</label>
+        					<input type="text" name="tags" placeholder="Введите тег:" class="tm-input tm-input-info tm-input-lager form-control"/>
+        					<div id="tagsIdea" class="tag-list form-control"></div>
+	        				<div>
+	        				<label class="text-primary">Содержание идеи:</label>
+							<textarea cols="80" name="editor1" id="editor1" cols="48" rows="10"></textarea>
+							</div>
+							<script>	
+							CKEDITOR.replace('editor1', {
+								filebrowserBrowseUrl: '/ckeditorN/libs/kcfinder/browse.php',
+								filebrowserUploadUrl: '/ckeditorN/libs/kcfinder/upload.php'
+								});
+							</script>
+						</div>						
 						<button type="submit" class="btn btn-primary">
 							<i class="fa fa-sign-in"></i> ок
-						</button>
+						</button>						
 					</form>
+					<!-- <form method="POST" action="index.php" onsubmit="return f_submit();">					
+						<p class="text-primary">Тэги для идеи:</p>
+        				<input type="text" name="tags" placeholder="Введите тег:" class="tm-input tm-input-info tm-input-lager"/>
+   						
+        				<div id="tagsIdea" class="tag-list"></div>
+        				<div>
+						<textarea cols="80" name="editor1" id="editor1" cols="48" rows="10"></textarea>
+						</div>
+						<script>	
+						CKEDITOR.replace('editor1', {
+							filebrowserBrowseUrl: '/ckeditorN/libs/kcfinder/browse.php',
+							filebrowserUploadUrl: '/ckeditorN/libs/kcfinder/upload.php'
+							});
+						</script>
+						<br><input type="submit" value="Постить" name="B1"  >
+						<textarea cols="80" name="editor" id="editor" cols="48" rows="10"></textarea> 
+					</form>	 -->
 				    </div>				  
 				</div>					
 			</div>
@@ -164,7 +219,7 @@
 						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 </span></a>/
 						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-</i></span></a>
+</span></a>
 					</div>
 				</div>
 				<div class="thumbnail item">
@@ -186,7 +241,7 @@
 						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 </span></a>/
 						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-</i></span></a>
+</span></a>
 					</div>
 				</div>
 				<div class="thumbnail item">
@@ -208,7 +263,7 @@
 						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 </span></a>/
 						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-</i></span></a>
+</span></a>
 					</div>
 				</div>
 				<div class="thumbnail item">
@@ -230,7 +285,7 @@
 						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 </span></a>/
 						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-</i></span></a>
+</span></a>
 					</div>
 				</div>
 				<div class="thumbnail item">
@@ -252,7 +307,7 @@
 						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 </span></a>
 						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-</i></span></a>
+</span></a>
 					</div>
 				</div>
 				<div class="thumbnail item">
@@ -274,16 +329,77 @@
 						<a href="#"><span class="item-up"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 </span></a>
 						<a href="#"><span class="item-down"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-</i></span></a>/
+</span></a>/
 					</div>
 				</div>
 			</div>
 			<div class="sidebar col-md-3">
 				<div class="tags_pic">
-					<img class="tags-pic-logo" src="images/1.png" alt="RedEyesDevelopment" />
+					<div id="tagcloud">
+				        <ul>
+				            <li><a href="#">dazzlingly</a></li>
+				            <li><a href="#">natatory</a></li>
+				            <li><a href="#">automa</a></li>
+				            <li><a href="#">vinologist</a></li>
+				            <li><a href="#">castrate</a></li>
+				            <li><a href="#">airfoil</a></li>
+				            <li><a href="#">unpaintedly</a></li>
+				            <li><a href="#">caffetannic</a></li>
+				            <li><a href="#">fissirostrate</a></li>
+				            <li><a href="#">gingivectomy</a></li>
+				            <li><a href="#">pinprick</a></li>
+				            <li><a href="#">forecount</a></li>
+				            <li><a href="#">anorthophyre</a></li>
+				            <li><a href="#">tram</a></li>
+				            <li><a href="#">democratian</a></li>
+				            <li><a href="#">ungovernedness</a></li>
+				            <li><a href="#">anaesthesia</a></li>
+				            <li><a href="#">Eutychian</a></li>
+				            <li><a href="#">insalutary</a></li>
+				            <li><a href="#">amphilogism</a></li>
+				            <li><a href="#">reshunt</a></li>
+				            <li><a href="#">wende</a></li>
+				            <li><a href="#">ope</a></li>
+				            <li><a href="#">Bomarea</a></li>
+				            <li><a href="#">inadequative</a></li>
+				            <li><a href="#">ovalish</a></li>
+				            <li><a href="#">rhizopod</a></li>
+				            <li><a href="#">stethoscopist</a></li>
+				            <li><a href="#">riverman</a></li>
+				            <li><a href="#">underbuoy</a></li>
+				            <li><a href="#">Pindarist</a></li>
+				            <li><a href="#">bacteriodiagnosis</a></li>
+				            <li><a href="#">stonecutter</a></li>
+				            <li><a href="#">unlanterned</a></li>
+				            <li><a href="#">leawill</a></li>
+				            <li><a href="#">hooky</a></li>
+				            <li><a href="#">wisewoman</a></li>
+				            <li><a href="#">gerundively</a></li>
+				            <li><a href="#">minny</a></li>
+				            <li><a href="#">aminosuccinamic</a></li>
+				            <li><a href="#">theaterless</a></li>
+				            <li><a href="#">heal</a></li>
+				            <li><a href="#">synchronically</a></li>
+				            <li><a href="#">devilman</a></li>
+				            <li><a href="#">unbilleted</a></li>
+				            <li><a href="#">galactotherapy</a></li>
+				            <li><a href="#">ninepenny</a></li>
+				            <li><a href="#">Andesic</a></li>
+				            <li><a href="#">trainbolt</a></li>
+				            <li><a href="#">Daza</a></li>
+				            <li><a href="#">porterage</a></li>
+				            <li><a href="#">innoxiousness</a></li>
+				            <li><a href="#">sextuplex</a></li>
+				            <li><a href="#">pharmacologic</a></li>
+				            <li><a href="#">overlip</a></li>
+				            <li><a href="#">Paiconeca</a></li>
+				            <li><a href="#">grooving</a></li>
+				            <li><a href="#">sublinear</a></li>
+				        </ul>
+				    </div>
 				</div>
 				<div class="tags">
-					<img class="tags-logo" src="images/2.png" alt="RedEyesDevelopment" />
+					
 				</div>
 
 
@@ -298,10 +414,62 @@
 	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
-	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
-	<script src="libs/bootstrap/bootstrap.js"></script>
-	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
-	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+
+	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><script type="text/javascript" src="https://rawgithub.com/dynamicguy/tagcloud/master/src/tagcloud.jquery.js"></script>-->
+	 
+	 <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>     
+	 <script src="libs/tagcloud/tagcloud.jquery.js"></script> 
+<script type="text/javascript">
+    var settings = {
+    //height of sphere container
+    height: 400,
+    //width of sphere container
+    width: 400,
+    //radius of sphere
+    radius: 150,
+    //rotation speed
+    speed: 3,
+    //sphere rotations slower
+    slower: 0.9,
+    //delay between update position
+    timer: 5,
+    //dependence of a font size on axis Z
+    fontMultiplier: 15,
+    //tag css stylies on mouse over
+    hoverStyle: {
+        border: 'none',
+        color: '#0b2e6f'
+    },
+    //tag css stylies on mouse out
+    mouseOutStyle: {
+        border: '',
+        color: ''
+    }
+    };
+
+    $(document).ready(function(){
+        $('#tagcloud').tagoSphere(settings);
+    });
+</script>
+<script> 
+		function f_submit(){
+			var value1 = CKEDITOR.instances['editor1'].getData();			
+			document.getElementById("editor").value=value1;			
+			return false;			
+		}
+	</script>	
+	<script>jQuery(".tm-input").tagsManager();</script>
+	<script>
+          $(function(){            
+            $("#tagsIdea").tags({
+              suggestions: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India"],
+              tagData: ["india", "juliett"],
+              caseInsensitive: true
+            });            
+          });
+        </script>
+	
+	 <script src="libs/fancybox/jquery.fancybox.pack.js"></script>
 	<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
 	<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
 	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
@@ -309,7 +477,7 @@
 	<script src="libs/countdown/jquery.countdown.min.js"></script>
 	<script src="libs/countdown/jquery.countdown-ru.js"></script>
 	<script src="libs/landing-nav/navigation.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/common.js"></script> 
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>

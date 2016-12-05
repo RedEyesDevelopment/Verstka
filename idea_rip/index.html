@@ -335,7 +335,8 @@
 			</div>
 			<div class="sidebar col-md-3">
 				<div class="tags_pic">
-					<div id="tagcloud">
+					<div id='tag-cloud'></div>
+					<!-- <div id="tagcloud">
 				        <ul>
 				            <li><a href="#">dazzlingly</a></li>
 				            <li><a href="#">natatory</a></li>
@@ -396,13 +397,11 @@
 				            <li><a href="#">grooving</a></li>
 				            <li><a href="#">sublinear</a></li>
 				        </ul>
-				    </div>
+				    </div> -->
 				</div>
 				<div class="tags">
 					
 				</div>
-
-
 			</div>
 		</div>
 	</div>
@@ -417,41 +416,104 @@
 
 	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><script type="text/javascript" src="https://rawgithub.com/dynamicguy/tagcloud/master/src/tagcloud.jquery.js"></script>-->
 	 
-	 <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>     
-	 <script src="libs/tagcloud/tagcloud.jquery.js"></script> 
-<script type="text/javascript">
-    var settings = {
-    //height of sphere container
-    height: 400,
-    //width of sphere container
-    width: 400,
-    //radius of sphere
-    radius: 150,
-    //rotation speed
-    speed: 3,
-    //sphere rotations slower
-    slower: 0.9,
-    //delay between update position
-    timer: 5,
-    //dependence of a font size on axis Z
-    fontMultiplier: 15,
-    //tag css stylies on mouse over
-    hoverStyle: {
-        border: 'none',
-        color: '#0b2e6f'
-    },
-    //tag css stylies on mouse out
-    mouseOutStyle: {
-        border: '',
-        color: ''
-    }
-    };
+	 <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="libs/jquery-svg3dtagcloud/jquery.svg3dtagcloud.min.js"></script>
+	<script>
+	    	$( document ).ready( function() {
+	            var entries = [ 
+	                { label: 'Back to top', url: '#', target: '_top' },
+	                { label: 'Bootstrap', url: '#', target: '_top' },
+	                { label: 'Carousel', url: '#', target: '_top' },
+	                { label: 'Countdown', url: '#', target: '_top' },
+	                { label: 'Dropdown Menu', url: '#', target: '_top' },
+	                { label: 'CodePen', url: '#', target: '_top' },
+	                { label: 'three.js', url: '#', target: '_top' },
+	                { label: 'Form Validation', url: '#', target: '_top' },
+	                { label: 'JS Compress', url: '#', target: '_top' },
+	                { label: 'TinyPNG', url: '#', target: '_top' },
+	                { label: 'Can I Use', url: '#', target: '_top' },
+	                { label: 'URL shortener', url: '#', target: '_top' },
+	                { label: 'Grid Layout', url: '#', target: '_top' },
+	                { label: 'Twitter', url: '#', target: '_top' },
+	                { label: 'deviantART', url: '#', target: '_top' },
+	                { label: 'Gulp', url: '#', target: '_top' },
+	                { label: 'Browsersync', url: '#', target: '_top' },
+	                { label: 'GitHub', url: 'https://github.com/', target: '_top' },
+	                { label: 'Shadertoy', url: '#', target: '_top' },
+	                { label: 'Tree View', url: 'http://www.jqueryscript.net/tags.php?/tree%20view/', target: '_top' },
+	                { label: 'jsPerf', url: '#', target: '_top' },
+	                { label: 'Foundation', url: '#', target: '_top' },
+	                { label: 'CreateJS', url: '#', target: '_top' },
+	                { label: 'Velocity.js', url: 'http://julian.com/research/velocity/', target: '_top' },
+	                { label: 'TweenLite', url: '#', target: '_top' },
+	                { label: 'jQuery', url: 'https://jquery.com/', target: '_top' },
+	                { label: 'Notification', url: 'http://www.jqueryscript.net/tags.php?/Notification/', target: '_top' },
+	                { label: 'Parallax', url: 'http://www.jqueryscript.net/tags.php?/parallax/', target: '_top' }
+	            ];
 
-    $(document).ready(function(){
-        $('#tagcloud').tagoSphere(settings);
-    });
-</script>
-<script> 
+	            var settings = {
+
+	                entries: entries,
+	                width: 320,
+	                height: 240,
+	                radius: '85%',
+	                radiusMin: 75,
+	                bgDraw: true,
+	                bgColor: '#FFF',
+	                opacityOver: 1.00,
+	                opacityOut: 0.05,
+	                opacitySpeed: 6,
+	                fov: 800,
+	                speed: 2,
+	                fontFamily: 'Oswald, Arial, sans-serif',
+	                fontSize: '15',
+	                fontColor: '#337ab7',
+	                fontWeight: 'normal',//bold
+	                fontStyle: 'normal',//italic 
+	                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+	                fontToUpperCase: true
+
+	            };
+	            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+	            $( '#tag-cloud' ).svg3DTagCloud( settings );
+			} );        
+	</script>
+
+
+	 <!-- <script src="libs/tagcloud/tagcloud.jquery.js"></script> 
+		<script type="text/javascript">
+		    var settings = {
+		    //height of sphere container
+		    height: 400,
+		    //width of sphere container
+		    width: 400,
+		    //radius of sphere
+		    radius: 150,
+		    //rotation speed
+		    speed: 3,
+		    //sphere rotations slower
+		    slower: 0.9,
+		    //delay between update position
+		    timer: 5,
+		    //dependence of a font size on axis Z
+		    fontMultiplier: 15,
+		    //tag css stylies on mouse over
+		    hoverStyle: {
+		        border: 'none',
+		        color: '#0b2e6f'
+		    },
+		    //tag css stylies on mouse out
+		    mouseOutStyle: {
+		        border: '',
+		        color: ''
+		    }
+		    };
+
+		    $(document).ready(function(){
+		        $('#tagcloud').tagoSphere(settings);
+		    });
+		</script> -->
+	<script> 
 		function f_submit(){
 			var value1 = CKEDITOR.instances['editor1'].getData();			
 			document.getElementById("editor").value=value1;			

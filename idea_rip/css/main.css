@@ -71,8 +71,28 @@ body {
   margin-top: -50px;
   margin-left: 140px;
 }
+
+.navbar-default {
+  background-color:#0081C2;
+  background-image: none;
+  background-repeat: no-repeat;
+  color:#ffffff;
+  font-color:#ffffff;
+ }
+.navbar-default>li>a{  
+  color:#ffffff;  
+ }
+ .logo-pic{
+ 	margin-left: -50px;
+ }
+
+
 .grid{
 	padding-top: 10px;
+}
+
+.form-reg{
+	text-align: right;
 }
 .item-name{
 	margin: 0;	
@@ -84,3 +104,37 @@ body {
 hr{
 	margin: 2px;
 }
+/*.jumbotron{
+  heght:100%;
+  width:100%;
+}*/
+/*.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  /*/min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  /*display: flex;
+  align-items: center;
+}*/
+/*.vertical-center {
+  height:100%;
+  width:100%;
+
+  text-align: center;  /* align the inline(-block) elements horizontally */
+ /* font: 0/0 a;         /* remove the gap between inline(-block) elements */
+/*}
+
+.vertical-center:before {    /* create a full-height inline block pseudo=element */
+  /*content: " ";
+  display: inline-block;
+  vertical-align: middle;    /* vertical alignment of the inline element */
+ /* height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: 100%;
+
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+                           /* reset the font property */
+ /* font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}*/
